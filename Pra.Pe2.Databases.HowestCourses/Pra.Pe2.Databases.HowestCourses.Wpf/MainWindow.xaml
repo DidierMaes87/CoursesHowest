@@ -1,0 +1,75 @@
+﻿<Window x:Class="Pra.Pe2.Databases.HowestCourses.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pra.Pe2.Databases.HowestCourses.Wpf"
+        mc:Ignorable="d"
+        Title="Howest" Height="450" Width="1000" Loaded="Window_Loaded">
+    <Grid Background="#FF44C8F5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <WrapPanel Grid.Column="1">
+            <ComboBox x:Name="cmbPrograms" Grid.Column="1" Margin="20" Width="200" SelectionChanged="CmbPrograms_SelectionChanged_1"/>
+            <ComboBox x:Name="cmbCurriculum" Grid.Column="1" Margin="20" Width="200" SelectionChanged="CmbCurriculum_SelectionChanged"/>
+        </WrapPanel>
+        <GroupBox Grid.Row="2" Grid.Column="1" Margin="20" Header="Vakken">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <ListBox x:Name="lstCourses" Margin="20" SelectionChanged="LstCourses_SelectionChanged" Background="#FFDAFAFF" />
+                <StackPanel Grid.Column="1">
+                    <StackPanel.Background>
+                        <ImageBrush ImageSource="/Logo-howest (1).jpg" Stretch="Uniform" TileMode="None" Opacity="0.8">
+                            <ImageBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.95" ScaleY="1.12"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </ImageBrush.RelativeTransform>
+                        </ImageBrush>
+                    </StackPanel.Background>
+                    <Label Margin="10" Height="25" />
+                    <ComboBox x:Name="cmbLecturers" Margin="10" SelectedValuePath="ID" />
+                    <Button x:Name="btnSaveCourse" Margin="10" Click="BtnSaveCourse_Click">Opslaan</Button>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+        <GroupBox Margin="20" Grid.RowSpan="2"  Header="Lectoren">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <ListBox x:Name="lstLecturers" Margin="20" SelectionChanged="LstLecturers_SelectionChanged" Background="#FFDAFAFF" />
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="txtFirstname" Height="25" Margin="10" Background="#FFDAFAFF" />
+                    <TextBox x:Name="txtLastName" Grid.Column="1" Height="25" Margin="10" Background="#FFDAFAFF" />
+                    <StackPanel Grid.Row="1" Grid.ColumnSpan="2">
+                        <Button x:Name="btnEditLecturer" Height="25" Margin="10" Click="BtnEditLecturer_Click">Wijzig</Button>
+                        <Button x:Name="BtnAddLecturer" Height="25" Margin="10" Click="BtnAddLecturer_Click">Voeg toe</Button>
+                        <Button x:Name="BtnDeleteLecturer" Height="25" Margin="10" Click="BtnDeleteLecturer_Click">Verwijder</Button>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>

@@ -1,0 +1,10 @@
+is_global = true
+build_property.TargetFramework = net5.0-windows
+build_property.TargetPlatformMinVersion = 7.0
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.PublishSingleFile = 
+build_property.IncludeAllContentForSelfExtract = 
+build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
+build_property.RootNamespace = Pra.Pe2.Databases.HowestCourses.Wpf
+build_property.ProjectDir = C:\Users\didie\OneDrive\Bureaublad\CoursesHowest\Pra.Pe2.Databases.HowestCourses\Pra.Pe2.Databases.HowestCourses.Wpf\
